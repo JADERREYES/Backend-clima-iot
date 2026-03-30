@@ -4,9 +4,11 @@ const climaRoutes = require("./routes/climaRoutes");
 
 const app = express();
 
+// middlewares
 app.use(cors());
 app.use(express.json());
 
+// ruta raíz
 app.get("/", (req, res) => {
   res.json({
     ok: true,
@@ -14,6 +16,8 @@ app.get("/", (req, res) => {
   });
 });
 
+// rutas API
 app.use("/api", climaRoutes);
 
+// 🔴 IMPORTANTE (esto faltaba)
 module.exports = app;

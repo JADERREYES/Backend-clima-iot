@@ -8,9 +8,10 @@ const {
   obtenerEstadisticas
 } = require("../controllers/climaController");
 
+// rutas
 router.post("/clima", registrarClima);
 router.get("/clima", obtenerHistorialClima);
 router.get("/clima/ultimo", obtenerUltimoClima);
 router.get("/clima/stats", obtenerEstadisticas);
 
-module.exports = router;    
+module.exports = router;
